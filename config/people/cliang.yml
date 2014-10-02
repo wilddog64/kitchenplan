@@ -1,7 +1,14 @@
 groups:
     - groupa
 recipes:
+    global:
+        - applicaitons::create_var_chef_cache
     mac_os_x:
+        - osxdefaults::automatically_quit_printer_app_once_the_print_jobs_complete
+        - osxdefaults::avoid_creating_ds_store_files_on_network_volumes
+        - osxdefaults::disable_resume_system-wide
+        - osxdefaults::save_screenshots_in_png_format
+        - osxdefaults::save_screenshots_to_the_desktop- homebrewalt::default
         - osxdefaults::set_computer_name
 attributes:
     osxdefaults:
@@ -11,3 +18,5 @@ attributes:
             - git-extras
         cask_apps:
             - sourcetree
+            - google-chrome
+            - firefox
